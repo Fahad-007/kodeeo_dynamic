@@ -45,51 +45,67 @@
                 <nav class="c-menu js-menu">
                     <ul class="u-list">
                         <li class="c-menu__item is-active" data-toggle="tooltip" title="Flights">
-                            <div  class="c-menu__item__inner"><i class="fa fa-tachometer"></i>
-                                <div class="c-menu-item__title"><span>Dashboard</span></div>
-                            </div>
+                            <a href="index.php">
+                                <div  class="c-menu__item__inner"><i class="fa fa-tachometer"></i>
+                                    <div class="c-menu-item__title"><span>Dashboard</span></div>
+                                </div>
+                            </a>
                         </li>
 
-                        <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Modules">
-                            <div class="c-menu__item__inner"><i class="fa fa-header"></i>
-                                <div class="c-menu-item__title"><span>Header</span></div>
-                            </div>
+                        <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Slider">
+                            <a href="slider.php">
+                                <div class="c-menu__item__inner"><i class="fa fa-header"></i>
+                                    <div class="c-menu-item__title"><span>Slider</span></div>
+                                </div>
+                            </a>
                         </li>
 
-                        <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Statistics">
-                            <div class="c-menu__item__inner"><i class="fa fa-info-circle"></i>
-                                <div class="c-menu-item__title"><span>About</span></div>
-                            </div>
+                        <li class="c-menu__item has-submenu" data-toggle="tooltip" title="About Section">
+                            <a href="about.php">
+                                <div class="c-menu__item__inner"><i class="fa fa-info-circle"></i>
+                                    <div class="c-menu-item__title"><span>About</span></div>
+                                </div>
+                            </a>
                         </li>
 
-                        <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Gifts">
-                            <div class="c-menu__item__inner"><i class="fa fa-desktop"></i>
-                                <div class="c-menu-item__title"><span>Services</span></div>
-                            </div>
+                        <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Services">
+                            <a href="services.php">
+                                <div class="c-menu__item__inner"><i class="fa fa-desktop"></i>
+                                    <div class="c-menu-item__title"><span>Services</span></div>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Portfolio">
+                            <a href="works.php">
+                                <div class="c-menu__item__inner"><i class="fa fa-photo"></i>
+                                    <div class="c-menu-item__title"><span>Portfolio</span></div>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Clients">
+                            <a href="clients_comment.php">
+                                <div class="c-menu__item__inner"><i class="fa fa-users"></i>
+                                    <div class="c-menu-item__title"><span>Clients</span></div>
+                                </div>
+                            </a>
                         </li>
 
                         <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Settings">
-                            <div class="c-menu__item__inner"><i class="fa fa-photo"></i>
-                                <div class="c-menu-item__title"><span>Portfolio</span></div>
-                            </div>
-                        </li>
-
-                        <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Settings">
-                            <div class="c-menu__item__inner"><i class="fa fa-users"></i>
-                                <div class="c-menu-item__title"><span>Clients</span></div>
-                            </div>
-                        </li>
-
-                        <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Settings">
-                            <div class="c-menu__item__inner"><i class="fa fa-heart"></i>
-                                <div class="c-menu-item__title"><span>Team</span></div>
-                            </div>
+                            <a href="team_members.php">
+                                <div class="c-menu__item__inner"><i class="fa fa-heart"></i>
+                                    <div class="c-menu-item__title"><span>Team</span></div>
+                                </div>
+                            </a>
                         </li>
                         
                         <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Settings">
-                            <div class="c-menu__item__inner"><i class="fa fa-cogs"></i>
-                                <div class="c-menu-item__title"><span>Settings</span></div>
-                            </div>
+                            <a href="#">
+                                <div class="c-menu__item__inner"><i class="fa fa-cogs"></i>
+                                    <div class="c-menu-item__title"><span>Settings</span></div>
+                                </div>
+                            </a>
                         </li>
                     </ul>
                 </nav>

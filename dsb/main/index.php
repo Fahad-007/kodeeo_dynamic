@@ -1,31 +1,7 @@
 <?php 
 	require_once('db.php');
 	$upload_dir = '../images/';
-
-	$queryAbout = "select * from about_section";
-	$resultAbout = mysqli_query($connection, $queryAbout);
-	$dataAbout['section'] = $resultAbout;
-
-	$queryServ = "select * from services_section";
-	$resultServ = mysqli_query($connection, $queryServ);
-	$dataServ['section'] = $resultServ;
-
-	$queryWork = "select * from portfolio_filter";
-	$resultWork = mysqli_query($connection, $queryWork);
-	$dataWork['section'] = $resultWork;
-
-    $queryPort = "select * from portfolio_item";
-    $resultPort = mysqli_query($connection, $queryPort);
-    $dataPort['section'] = $resultPort;
-
-
-    $queryComment = "select * from client_comment_section";
-    $resultComment = mysqli_query($connection, $queryComment);
-    $dataComment['section'] = $resultComment;
-
-    $queryTeam = "select * from team_members";
-    $resultTeam = mysqli_query($connection, $queryTeam);
-    $dataTeam['section'] = $resultTeam;
+	require_once('../function.php')
 
 ?>
 
@@ -57,7 +33,7 @@
 		    padding: 20px;
 		    border-radius: 4px;
 		    text-align: center;
-	border:1px solid #ECECEC;
+			border:1px solid #ECECEC;
 		    box-shadow: 0 19px 38px rgba(0,0,0,0.10), 0 15px 12px rgba(0,0,0,0.02);
 		}
 		#customers-testimonials .shadow-effect p {
@@ -249,10 +225,8 @@
                       <div class="swiper-wrapper">
 
                       	<?php
-			                $query = "select * from slider_section";
-			                $result = mysqli_query($connection, $query);
-			                if(mysqli_num_rows($result)){
-			                    while($row = mysqli_fetch_assoc($result)){
+			                if(mysqli_num_rows($dataSlider['section'])){
+			                    while($row = mysqli_fetch_assoc($dataSlider['section'])){
 			            ?>
 
                           <div class="swiper-slide container">
@@ -807,8 +781,8 @@
 
         swiper.params.control = thumbs;
         thumbs.params.control = swiper;
-</script>
-<script>
+	</script>
+	<script>
 	jQuery(document).ready(function($) {
         		"use strict";
         		//  TESTIMONIALS CAROUSEL HOOK
@@ -834,7 +808,7 @@
 		            }
 		        });
         	});
-</script>
+	</script>
 
 
 </body>

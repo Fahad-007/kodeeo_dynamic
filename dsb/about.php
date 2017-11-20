@@ -1,6 +1,7 @@
 <?php 
     require_once('db.php');
     $upload_dir = 'images/';
+    require_once('function.php');
 
     if (isset($_GET['delete'])) {
         $id = $_GET['delete'];
@@ -64,57 +65,72 @@
                 <div class="logo__txt"><img src="img/logo.kodeeo.png"></div>
             </div>
             <div class="l-sidebar__content">
+                
                 <nav class="c-menu js-menu">
                     <ul class="u-list">
+                        <li class="c-menu__item" data-toggle="tooltip" title="Flights">
+                            <a href="index.php">
+                                <div  class="c-menu__item__inner"><i class="fa fa-tachometer"></i>
+                                    <div class="c-menu-item__title"><span>Dashboard</span></div>
+                                </div>
+                            </a>
+                        </li>
 
-                        <a href="#"><li class="c-menu__item is-active" data-toggle="tooltip" title="Dashboard">
-                            <div class="c-menu__item__inner"><i class="fa fa-tachometer"></i>
-                                <div class="c-menu-item__title"><span>Dashboard</span></div>
-                            </div>
-                        </li></a>
+                        <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Slider">
+                            <a href="slider.php">
+                                <div class="c-menu__item__inner"><i class="fa fa-header"></i>
+                                    <div class="c-menu-item__title"><span>Slider</span></div>
+                                </div>
+                            </a>
+                        </li>
 
-                        <a href="#slider"><li class="c-menu__item has-submenu" data-toggle="tooltip" title="Header">
-                            <div class="c-menu__item__inner"><i class="fa fa-header"></i>
-                                <div class="c-menu-item__title"><span>Header</span></div>
-                            </div>
-                        </li></a>
+                        <li class="c-menu__item has-submenu is-active" data-toggle="tooltip" title="About Section">
+                            <a href="about.php">
+                                <div class="c-menu__item__inner"><i class="fa fa-info-circle"></i>
+                                    <div class="c-menu-item__title"><span>About</span></div>
+                                </div>
+                            </a>
+                        </li>
 
-                        <a href="#section-about"><li class="c-menu__item has-submenu" data-toggle="tooltip" title="Statistics">
-                            <div class="c-menu__item__inner"><i class="fa fa-info-circle"></i>
-                                <div class="c-menu-item__title"><span>About</span></div>
-                            </div>
-                        </li></a>
+                        <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Services">
+                            <a href="services.php">
+                                <div class="c-menu__item__inner"><i class="fa fa-desktop"></i>
+                                    <div class="c-menu-item__title"><span>Services</span></div>
+                                </div>
+                            </a>
+                        </li>
 
-                        <a href="#section-services"><li class="c-menu__item has-submenu" data-toggle="tooltip" title="Gifts">
-                            <div class="c-menu__item__inner"><i class="fa fa-desktop"></i>
-                                <div class="c-menu-item__title"><span>Services</span></div>
-                            </div>
-                        </li></a>
+                        <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Portfolio">
+                            <a href="works.php">
+                                <div class="c-menu__item__inner"><i class="fa fa-photo"></i>
+                                    <div class="c-menu-item__title"><span>Portfolio</span></div>
+                                </div>
+                            </a>
+                        </li>
 
-                        <a href="#section-portfolio"><li class="c-menu__item has-submenu" data-toggle="tooltip" title="Settings">
-                            <div class="c-menu__item__inner"><i class="fa fa-photo"></i>
-                                <div class="c-menu-item__title"><span>Portfolio</span></div>
-                            </div>
-                        </li></a>
+                        <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Clients">
+                            <a href="clients_comment.php">
+                                <div class="c-menu__item__inner"><i class="fa fa-users"></i>
+                                    <div class="c-menu-item__title"><span>Clients</span></div>
+                                </div>
+                            </a>
+                        </li>
 
-                        <a href="#section-clients"><li class="c-menu__item has-submenu" data-toggle="tooltip" title="Settings">
-                            <div class="c-menu__item__inner"><i class="fa fa-users"></i>
-                                <div class="c-menu-item__title"><span>Clients</span></div>
-                            </div>
-                        </li></a>
-
-                        <a href="#section-team"><li class="c-menu__item has-submenu" data-toggle="tooltip" title="Settings">
-                            <div class="c-menu__item__inner"><i class="fa fa-heart"></i>
-                                <div class="c-menu-item__title"><span>Team</span></div>
-                            </div>
-                        </li></a>
-
-                        <a href="#section-contact"><li class="c-menu__item has-submenu" data-toggle="tooltip" title="Settings">
-                            <div class="c-menu__item__inner"><i class="fa fa-cogs"></i>
-                                <div class="c-menu-item__title"><span>Settings</span></div>
-                            </div>
-                        </li></a>
-
+                        <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Settings">
+                            <a href="team_members.php">
+                                <div class="c-menu__item__inner"><i class="fa fa-heart"></i>
+                                    <div class="c-menu-item__title"><span>Team</span></div>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Settings">
+                            <a href="#">
+                                <div class="c-menu__item__inner"><i class="fa fa-cogs"></i>
+                                    <div class="c-menu-item__title"><span>Settings</span></div>
+                                </div>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -149,10 +165,8 @@
             </thead>
             <tbody>
             <?php
-                $query = "select * from about_section";
-                $result = mysqli_query($connection, $query);
-                if(mysqli_num_rows($result)){
-                    while($row = mysqli_fetch_assoc($result)){
+                if(mysqli_num_rows($dataAbout['section'])){
+                    while($row = mysqli_fetch_assoc($dataAbout['section'])){
             ?>
                 <tr>
                     <td><?php echo $row['id'] ?></td>
