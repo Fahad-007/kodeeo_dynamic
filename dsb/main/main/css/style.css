@@ -1,0 +1,134 @@
+
+
+
+
+.hr{
+	width: 80px;
+	height: 2px;
+	margin: 30px auto;
+	background-color: #1ABC9C;
+	transition: .3s ease-in-out;
+}
+
+.hr:hover{
+	width: 120px;
+}
+
+#logo img{
+	padding: 3px;
+}
+.flexslider img{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+.slide .col-sm-4{
+	height: auto;
+	padding: 5px;
+}
+.team_item{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	margin: 0 auto;
+}
+#section-team{
+	background-color: #F5F5F5;
+	padding-bottom: 60px;
+}
+
+.footer_logo{
+	width: 50px;
+	height: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+.inp-box{
+	width: 45%;
+	height: 30px;
+	float: left;
+}
+.border{
+	text-align: center;
+	height: 150px;
+	border:1px solid #DDD;
+	transition: all .2s;
+}
+.border:hover{
+	box-shadow:  -2px 2px 5px 1px gray;
+}
+.border h4{
+	margin: 0;
+	margin-top: 40px;
+}
+.border i{
+	transform: translateY(-40px);
+	display: block;
+	position: absolute;
+	background-color: #fff;
+	width: 80px;
+	height: 80px;
+	line-height: 80px;
+	border-radius: 50%;
+	color: #002060;
+}
+
+.contact-box{
+	padding: 10px;
+}
+
+.foot-div{
+	text-align: left;
+}
+.foot-div img{
+	width: 60px;
+	height: 60px;
+}
+.foot-div ul li{
+	list-style: none;
+	margin: 5px 0;
+	font-size: 15px;
+}
+.foot-div ul li a div{
+	margin: 5px 0;
+}
+.foot-div ul li a:hover{
+	color: #002060;
+}
+#copyrights .container{
+	height: 60px;
+}
+
+
+
+.header-wrap .container{
+	background-color: #fff;
+}
+
+.side-panel-wrap i{
+	font-size: 20px;
+	font-weight: 300;
+}
+
+/* preloader-------------------*/
+
+
+#prelaoder{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(10,10,10,1);z-index:1000}
+
+.spinner{text-align:center;font-size:10px}
+.spinner,.spinner-inner{position:absolute;top:0;bottom:0;right:0;left:0;border:9px solid #fff;border-color:transparent #fff;margin:auto}
+
+.spinner{width:85px;height:85px;-webkit-animation:spin 2.2s linear 0s infinite normal;-moz-animation:spin 2.2s linear 0s infinite normal;animation:spin 2.2s linear 0s infinite normal}
+
+.spinner-inner{width:40px;height:40px;-webkit-animation:spinback 1.2s linear 0s infinite normal;-moz-animation:spinback 1.2s linear 0s infinite normal;animation:spinback 1.2s linear 0s infinite normal}@-webkit-keyframes spin{from{-webkit-transform:rotate(0)}to{-webkit-transform:rotate(360deg)}}@-moz-keyframes spin{from{-moz-transform:rotate(0)}to{-moz-transform:rotate(360deg)}}@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}@-webkit-keyframes spinback{from{-webkit-transform:rotate(0)}to{-webkit-transform:rotate(-360deg)}}@-moz-keyframes spinback{from{-moz-transform:rotate(0)}to{-moz-transform:rotate(-360deg)}}@keyframes spinback{from{transform:rotate(0)}to{transform:rotate(-360deg)}}
+
+
+

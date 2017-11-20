@@ -1,0 +1,30 @@
+#header-2{
+	background-color: gray;
+}
+
+ 
+.l-main::-webkit-scrollbar{
+width:10px;
+background-color:#cccccc;
+} 
+.l-main::-webkit-scrollbar-thumb{
+background-color:#102c58;
+}
+.l-main::-webkit-scrollbar-thumb:hover{
+background-color:#f5642d;
+}
+.l-main::-webkit-scrollbar-thumb:active{
+background-color:#A6393D;
+} 
+
+
+.edit-text{
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	background-color: transparent;
+	border: 0;
+}
+.text-center{
+	text-align: center;
+}
